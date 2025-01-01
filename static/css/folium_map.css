@@ -1,0 +1,17 @@
+#map-container {
+    border: 1px solid white;
+    height: 80vh; /* Adjust this as needed */
+    width: 90vw;  /* Adjust this as needed */
+    margin: auto; /* Center the map within its parent */
+    overflow: hidden; /* Ensure no overflow */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;    /* Center content vertically */
+}
+
+.leaflet-container {
+    width: 100% !important;
+    height: 100% !important;
+    border: none; /* Ensure no extra borders inside */
+}

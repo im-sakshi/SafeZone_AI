@@ -1,0 +1,242 @@
+{% extends 'layout.html' %} {% block content %}
+<div
+  style="
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    flex-shrink: 1;
+  "
+>
+  <div
+    style="
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      text-align: center;
+      flex-shrink: inherit;
+    "
+  >
+    <form
+      style="
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        text-align: center;
+      "
+      id="loginForm"
+    >
+      <input
+        class="form-control"
+        style="height: 50px; width: 350px"
+        type="email"
+        placeholder="Email ID"
+        id="email"
+      />
+
+      <input
+        class="form-control"
+        style="height: 50px; width: 350px"
+        type="password"
+        placeholder="Password"
+        id="password"
+      />
+      <input
+        class="btn btn-primary"
+        type="submit"
+        value="Login"
+        style="height: 50px; width: 350px"
+        id="loginBtn"
+      />
+    </form>
+    <span
+      >Not Registered?
+      <a href="registrationPage.html">Create an account</a></span
+    >
+    <span><a href="./forgotPasswordPage.html">Forgot Password</a></span>
+  </div>
+
+  <div
+    class="dropdown bd-mode-toggle position-fixed top-0 end-0 mb-3 me-3"
+    style="margin-top: 10px"
+  >
+    <!--new theme button-->
+    <div>
+      <div id="light-theme-option">
+        <button
+          class="btn py-2 d-flex align-items-center"
+          id="btn-theme-light"
+          type="button"
+          style="color: inherit"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.3em"
+            height="1.3em"
+            fill="currentColor"
+            class="bi bi-sun-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+            />
+          </svg>
+        </button>
+      </div>
+      <div id="dark-theme-option">
+        <button
+          class="btn py-2 d-flex align-items-center"
+          id="btn-theme-dark"
+          type="button"
+          style="color: inherit"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.3em"
+            height="1.3em"
+            fill="currentColor"
+            class="bi bi-moon-stars-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+            />
+            <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function darkTheme() {
+    // Change body theme class
+    const body = document.body;
+    body.classList.remove("text-bg-light");
+    body.classList.add("text-bg-dark");
+
+    // Toggle visibility of theme buttons
+    document.getElementById("light-theme-option").style.display = "none";
+    document.getElementById("dark-theme-option").style.display = "block";
+
+    // Store the theme preference
+    localStorage.setItem("theme", "dark");
+  }
+
+  function lightTheme() {
+    // Change body theme class
+    const body = document.body;
+    body.classList.remove("text-bg-dark");
+    body.classList.add("text-bg-light");
+
+    // Toggle visibility of theme buttons
+    document.getElementById("dark-theme-option").style.display = "none";
+    document.getElementById("light-theme-option").style.display = "block";
+
+    // Store the theme preference
+    localStorage.setItem("theme", "light");
+  }
+
+  function setTheme() {
+    const theme = localStorage.getItem("theme");
+    if (theme === "dark") {
+      darkTheme();
+    } else {
+      lightTheme();
+    }
+  }
+
+  // Add event listeners to the buttons
+  document
+    .getElementById("btn-theme-light")
+    .addEventListener("click", darkTheme);
+  document
+    .getElementById("btn-theme-dark")
+    .addEventListener("click", lightTheme);
+
+  // Apply the saved theme preference on page load
+  setTheme();
+</script>
+
+<!-- to login-in user! -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: "",
+  };
+
+  const app = firebase.initializeApp(firebaseConfig);
+
+  const loginForm = document.getElementById("loginForm");
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    if (email.trim() == "" || password.trim() == "") {
+      alert("Please fill in all fields.");
+      return;
+    } else {
+      firebase
+        .auth()
+        .signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+          return userCredential.user.getIdToken();
+        })
+        .then((idToken) => {
+          // Send ID token to server
+          fetch("/verify_token", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: `id_token=${idToken}`,
+          })
+            .then((response) => {
+              if (response.ok) {
+                window.location.replace("/homepage.html");
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log(data);
+              localStorage.setItem("userName", data.uid);
+            });
+        })
+        .catch((error) => {
+          alert("Some error occurred. Please check your details and try again");
+          console.error(error);
+        });
+    }
+  });
+</script>
+<script>
+  // Disable back navigation (for logging out)
+  function disableBackButton() {
+    // Add a new state to the history
+    window.history.pushState(null, "", window.location.href);
+
+    // Set up an event listener for the popstate event
+    window.onpopstate = function () {
+      // When the back button is pressed, push the same state again
+      window.history.pushState(null, "", window.location.href);
+    };
+  }
+
+  // Run the function when the page loads
+  window.onload = disableBackButton;
+</script>
+{% endblock %}

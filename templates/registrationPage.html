@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SafeZone-AI - Register</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="text-bg-dark">
+    <div
+      style="
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        margin: auto;
+        padding: 50px;
+        align-items: center;
+        justify-content: center;
+        color: inherit;
+        flex-shrink: 1;
+      "
+    >
+      <div
+        style="
+          border: 1px solid transparent;
+          display: flex;
+          flex-direction: column;
+          row-gap: 15px;
+          text-align: center;
+          flex-shrink: inherit;
+        "
+      >
+        <form
+          style="
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            text-align: center;
+          "
+          id="signUpForm"
+        >
+          <input
+            class="form-control"
+            style="height: 50px; width: 360px"
+            type="text"
+            placeholder="Username"
+            id="username"
+          />
+          <div style="display: flex; flex-direction: row; column-gap: 10px">
+            <input
+              class="form-control"
+              type="text"
+              placeholder="First Name"
+              style="height: 50px; width: 175px"
+              id="fname"
+            />
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Last Name"
+              style="height: 50px; width: 175px"
+              id="lname"
+            />
+          </div>
+          <input
+            class="form-control"
+            style="height: 50px; width: 360px"
+            type="email"
+            placeholder="Email ID"
+            id="signUpEmail"
+          />
+          <input
+            class="form-control"
+            style="height: 50px; width: 360px"
+            type="password"
+            placeholder="Password (Minimum 6 Characters)"
+            id="signUpPass"
+          />
+          <input class="btn btn-primary" type="submit" value="Sign up" />
+        </form>
+        <span>Already have an account? <a href="./index.html">Login</a></span>
+      </div>
+
+      <div
+        class="dropdown bd-mode-toggle position-fixed top-0 end-0 mb-3 me-3"
+        style="margin-top: 10px"
+      >
+        <!--new theme button-->
+        <div>
+          <div id="light-theme-option">
+            <button
+              class="btn py-2 d-flex align-items-center"
+              id="btn-theme-light"
+              type="button"
+              style="color: inherit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.3em"
+                height="1.3em"
+                fill="currentColor"
+                class="bi bi-sun-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="dark-theme-option">
+            <button
+              class="btn py-2 d-flex align-items-center"
+              id="btn-theme-dark"
+              type="button"
+              style="color: inherit"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1.3em"
+                height="1.3em"
+                fill="currentColor"
+                class="bi bi-moon-stars-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"
+                />
+                <path
+                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--JS scripts imports........-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function darkTheme() {
+        // Change body theme class
+        const body = document.body;
+        body.classList.remove("text-bg-light");
+        body.classList.add("text-bg-dark");
+
+        // Toggle visibility of theme buttons
+        document.getElementById("light-theme-option").style.display = "none";
+        document.getElementById("dark-theme-option").style.display = "block";
+
+        // Store the theme preference
+        localStorage.setItem("theme", "dark");
+      }
+
+      function lightTheme() {
+        // Change body theme class
+        const body = document.body;
+        body.classList.remove("text-bg-dark");
+        body.classList.add("text-bg-light");
+
+        // Toggle visibility of theme buttons
+        document.getElementById("dark-theme-option").style.display = "none";
+        document.getElementById("light-theme-option").style.display = "block";
+
+        // Store the theme preference
+        localStorage.setItem("theme", "light");
+      }
+
+      function setTheme() {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+          darkTheme();
+        } else {
+          lightTheme();
+        }
+      }
+
+      // Add event listeners to the buttons
+      document
+        .getElementById("btn-theme-light")
+        .addEventListener("click", darkTheme);
+      document
+        .getElementById("btn-theme-dark")
+        .addEventListener("click", lightTheme);
+
+      // Apply the saved theme preference on page load
+      setTheme();
+    </script>
+    <script>
+      const signUpForm = document.getElementById("signUpForm");
+
+      signUpForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const username = document.getElementById("username").value;
+        const fname = document.getElementById("fname").value;
+        const lname = document.getElementById("lname").value;
+        const regEmail = document.getElementById("signUpEmail").value;
+        const regPass = document.getElementById("signUpPass").value;
+
+        if (regEmail.trim() == "" || regPass.trim() == "") {
+          alert("Please fill in all fields");
+          return;
+        } else {
+          fetch("/signup", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: `username=${username}&fname=${fname}&lname=${lname}&email=${regEmail}&pass=${regPass}`,
+          })
+            .then((response) => {
+              if (!response.ok) {
+                const errorText = response.text(); // Get error message from response body
+                console.error("Error:", errorText);
+                alert(
+                  "Signup failed. Please check your details and try again."
+                );
+                return;
+              }
+              const data = response.json();
+              console.log("Success:", data.message);
+              window.location.replace("/index.html");
+            })
+            .catch((error) => {
+              console.log(error);
+              alert("An unexpected error occurred. Please try again later.");
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
