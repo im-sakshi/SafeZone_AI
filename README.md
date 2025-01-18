@@ -32,7 +32,7 @@ Follow these steps to set up the project locally:
 1. Navigate to the cloned repository folder. 
 2. Create a Python virtual environment.  
 3. Activate the virtual environment
-4. Install the required dependencies from requirements.txt
+4. Install the required dependencies from `requirements.txt`
 
 
 ### Step 3: Create a Firebase Project
