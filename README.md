@@ -25,7 +25,7 @@ Follow these steps to set up the project locally:
 ### Step 1: Clone the Repository
 1. Open a terminal or command prompt.
 2. Run the following command to clone the repository:
-   - `git clone https://github.com/AmanJ4588/SafeZone-AI.git`
+   - `git clone https://github.com/im-sakshi/SafeZone_AI.git`
 
 
 ### Step 2: Set Up the Virtual Environment and Install Dependencies
